@@ -8,8 +8,11 @@ var placeSchema = new Schema({
  country: String,
  city: String,
  address: String,
+ description: String,
  imageFilename: String
 });
 
 var Place = mongoose.model('Place', placeSchema);
 module.exports = Place;
+
+
