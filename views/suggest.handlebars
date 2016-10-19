@@ -1,1 +1,42 @@
 <h1>Where Should We Go?</h1>
+
+<form action ="/pets/add" method="post" enctype="multipart/form-data">
+  
+  <lable for="place">Place: </lable>
+  <input type="text" name="place" id="place">
+  
+  <lable for="category">Category: </lable>
+  <select name="category" id="category">
+    <option value="parks">Parks</option>
+    <option value="sights&landmarks">Sights &amp; Landmarks</option>
+    <option value="museums">Museums</option>
+    <option value="drink&food">Food &amp; Drink</option>
+    <option value="concerts&shows">Concerts &amp; Shows</option>
+  </select>
+  
+  <lable for="continent">Continent: </lable>
+  <select name="continent" id="continent">
+    <option value="north america">North America</option>
+    <option value="south america">South America</option>
+    <option value="europe">Europe</option>
+    <option value="asia">Asia</option>
+    <option value="africa">Africa</option>
+    <option value="australia">Australia</option>
+  </select>
+  
+  <lable for="country">Country: </lable>
+  <input type="text" name="country" id="country">
+  
+  <lable for="city">City: </lable>
+  <input type="text" name="city" id="city">
+  
+  <label for="address">Address: </label>
+  <textarea></textarea>
+  
+  <label for="image">Image: </label>
+  <input id="image" type="file" name="image" accepts="image/*" >
+  
+  <textarea>Enter a description...</textarea>
+  
+  <input type="submit">
+</form>
