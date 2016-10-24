@@ -1,46 +1,60 @@
 //project entry point
-var express=require('express');
-var handlebars = require('express3-handlebars')
+var express = require('express');
+var handlebars = require('express-handlebars');
+var bodyParser = require('body-parser');
+var Mongoose = require('mongoose');
 
 var app = express();
+var path = require('path');
+
+require('dotenv').config();
+
+Mongoose.connect(process.env.DB_URL);
 
 var portNum = 8888;
 app.set('port', portNum);
 
-app.use(express.static(__dirname + '/public'));
-
 // set up handlebars view engine
-app.engine('handlebars', handlebars({ defaultLayout:'main' }));
+app.engine('handlebars', handlebars({ defaultLayout:'header_views' }));
 app.set('view engine', 'handlebars');
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+var api = require('/routes/api);
+app.use('/api', api);
+
+var place = require('/routes/places');
+app.use('/places', place);
 
 //site routes-----------------------
 app.get('/', function(req, res){
-  res.send('home');
+  res.render('home', {layout: 'plain_views'});
 });
 
 app.get('/explore', function(req, res){
-  res.send('explore');
+  res.render('explore');
 });
 
 app.get('/suggest', function(req, res){
-  res.send('suggest');
+  res.render('suggest');
 });
 
 // custom 404 page
 app.use(function(req, res, next){
   res.status(404);
-  res.render('404 - Not Found');
+  res.render('404', {layout: 'plain_views'});
 });
 
 // custom 500 page
 app.use(function(err, req, res, next){
   console.error(err.stack);
   res.status(500);
-  res.render('500 - Server Error');
+  res.render('500', {layout: 'plain_views'});
 });
 
+app.use(express.static(__dirname + '/public'));
 
-app.listen(app.get('port'), function(){
-  console.log( 'Express started on http://localhost: ' + portNum + ' ; press Ctrl-C to terminate.');
+app.listen(portNum, function(){
+  console.log( 'listening on port ', portNum);
 });

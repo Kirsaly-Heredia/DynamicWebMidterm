@@ -1,42 +1,65 @@
-<h1>Where Should We Go?</h1>
+<h1 class="suggest">Where Should We Go?</h1>
 
 <form action ="/pets/add" method="post" enctype="multipart/form-data">
+
+  <!--place name-->
+  <div class="country">
+    <label for="place">Place: </label>
+    <input type="text" name="place" id="place">
+  </div>
+
+  <!--category-->
+  <div class="country">
+    <label for="category">Category: </label>
+    <select name="category" id="category">
+      <option value="parks">Parks</option>
+      <option value="sights&landmarks">Sights &amp; Landmarks</option>
+      <option value="museums">Museums</option>
+      <option value="drink&food">Food &amp; Drink</option>
+      <option value="concerts&shows">Concerts &amp; Shows</option>
+    </select>
+  </div>
+
+  <!--continent-->
+  <div class="continent">
+    <label for="continent">Continent: </label>
+    <select name="continent" id="continent">
+      <option value="north america">North America</option>
+      <option value="south america">South America</option>
+      <option value="europe">Europe</option>
+      <option value="asia">Asia</option>
+      <option value="africa">Africa</option>
+      <option value="australia">Australia</option>
+    </select>
+  </div>
+
+  <!--country-->
+  <div class="country">
+    <label for="country">Country: </label>
+    <input type="text" name="country" id="country">
+  </div>
+
+  <!--city-->
+  <div class="city">
+    <label for="city">City: </label>
+    <input type="text" name="city" id="city">
+  </div>
+
+  <!--address-->
+  <div class="address">
+    <label for="address">Address: </label>
+    <textarea></textarea>
+  </div>
   
-  <lable for="place">Place: </lable>
-  <input type="text" name="place" id="place">
-  
-  <lable for="category">Category: </lable>
-  <select name="category" id="category">
-    <option value="parks">Parks</option>
-    <option value="sights&landmarks">Sights &amp; Landmarks</option>
-    <option value="museums">Museums</option>
-    <option value="drink&food">Food &amp; Drink</option>
-    <option value="concerts&shows">Concerts &amp; Shows</option>
-  </select>
-  
-  <lable for="continent">Continent: </lable>
-  <select name="continent" id="continent">
-    <option value="north america">North America</option>
-    <option value="south america">South America</option>
-    <option value="europe">Europe</option>
-    <option value="asia">Asia</option>
-    <option value="africa">Africa</option>
-    <option value="australia">Australia</option>
-  </select>
-  
-  <lable for="country">Country: </lable>
-  <input type="text" name="country" id="country">
-  
-  <lable for="city">City: </lable>
-  <input type="text" name="city" id="city">
-  
-  <label for="address">Address: </label>
-  <textarea></textarea>
-  
+  <!--img-->
   <label for="image">Image: </label>
   <input id="image" type="file" name="image" accepts="image/*" >
-  
-  <textarea>Enter a description...</textarea>
-  
-  <input type="submit">
+
+  <!--description-->
+  <textarea class="desciption">Enter a description...</textarea>
+
+  <!--submit button-->
+  <input class="submit" type="submit">
+
 </form>
+<footer></footer>

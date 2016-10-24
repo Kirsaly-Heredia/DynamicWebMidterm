@@ -1,1 +1,44 @@
-<h1>Where To?</h1>
+<aside>
+  <h2>Filter by Type</h2>
+  <ul class="sort">
+    <li>
+      <img class="icon" src="./img/icons/sight.png" />
+      Sights &amp; Landmarks
+    </li>
+    <li>
+      <img class="icon" src="./img/icons/park.png" />
+      Parks
+    </li>
+    <li>
+      <img class="icon" src="./img/icons/museum.png" />
+      Museum
+    </li>
+    <li>
+      <img class="icon" src="./img/icons/food.png" />
+      Food &amp; Drink
+    </li>
+    <li>
+      <img class="icon" src="./img/icons/show.png" />
+      Concerts &amp; Shows
+    </li>
+  </ul>
+</aside>
+
+<div class="search_bar">
+  <h3>Continent:</h3>
+  <div class="input"></div>
+  <h3>Country:</h3>
+  <div class="input"></div>
+  <h3>City:</h3>
+  <div class="input"></div>
+  <div class="search2"></div>
+</div>
+
+
+<div class="container">
+  {{#each places}}
+  
+    {{> place }}
+
+  {{/each}}
+</div>

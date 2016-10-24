@@ -1,0 +1,63 @@
+/*------------plainPageStyles------------*/
+body{
+  background-color: #001933;
+}
+
+/*------------homePageStyles------------*/
+h1.welcome{
+  font-family: 'Lobster', cursive;
+  color: #e5eaef;
+  font-size: 70px;
+  margin-left: 28%;
+  margin-bottom: 80px;
+}
+
+div.home{
+	margin-left: 30%;
+}
+
+div.button {
+  display: inline-block;
+  margin-right: 150px;
+}
+
+a img{
+	width: 200px; height:200px;
+}
+
+a p{
+  font-family: 'Droid Sans', Verdana, sans-serif;
+  font-style: bold;
+  color: #e5eaef;
+  width: 200px;
+  font-size: 25px;
+  position: relative;
+  left: 28%;
+}
+
+/*------------errorPageStyles------------*/
+div.error img{
+  width: 400px; height: 400px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 15%; left: 17%;
+  z-index: -1;
+}
+
+div.error h1{
+  font-family: 'Lobster', cursive;
+  color: #e5eaef;
+  font-size: 70px;
+  position: absolute;
+  top: 35%; left: 45%;
+  z-index: 1;
+}
+
+div.error p a{
+  position: absolute;
+  top: 60%; left:45%;
+  color: #e5eaef;
+  font-family: 'Droid Sans', Verdana, sans-serif;
+  width: 200px;
+  text-decoration: underline;
+}

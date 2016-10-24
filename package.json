@@ -12,7 +12,11 @@
     "body-parser": "^1.15.2",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
-    "express3-handlebars": "^0.5.2",
-    "node-sass": "^3.10.1"
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.6.4",
+    "multer": "^1.2.0",
+    "node-sass": "^3.10.1",
+    "run": "^1.4.0",
+    "watch": "^1.0.1"
   }
 }

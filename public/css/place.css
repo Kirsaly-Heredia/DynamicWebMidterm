@@ -1,0 +1,19 @@
+div.place{
+  display: inline-block;
+  width:45%;
+  margin-right: 50px;
+}
+
+img.result{
+  width:215px; height: 215px;
+  float: left;
+}
+
+img.cat{
+  width:40px; height: 40px;
+  float: right;
+}
+
+div.place h3, div.place h4, div.place p, ul.sort li{
+  font-family: 'Droid Sans', Verdana, sans-serif;
+}
