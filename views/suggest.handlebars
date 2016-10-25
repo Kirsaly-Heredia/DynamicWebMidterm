@@ -3,9 +3,9 @@
 <form action ="/places/add" method="post" enctype="multipart/form-data">
 
   <!--place name-->
-  <div class="country">
+  <div class="place">
     <label for="place">Place: </label>
-    <input type="text" name="place" id="place">
+    <input type="text" name="placeName" id="place">
   </div>
 
   <!--category-->
@@ -48,7 +48,7 @@
   <!--address-->
   <div class="address">
     <label for="address">Address: </label>
-    <textarea></textarea>
+    <textarea name="address"></textarea>
   </div>
   
   <!--img-->
@@ -56,7 +56,7 @@
   <input id="image" type="file" name="image" accepts="image/*" >
 
   <!--description-->
-  <textarea class="desciption">Enter a description...</textarea>
+  <textarea name="description" class="desciption">Enter a description...</textarea>
 
   <!--submit button-->
   <input class="submit" type="submit">

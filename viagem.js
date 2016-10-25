@@ -24,7 +24,7 @@ var api = require('./routes/api');
 app.use('/api', api);
 
 var place = require('./routes/places');
-app.use('/places', place);
+app.use('/', place);
 
 //site routes-----------------------
 app.get('/', function (req, res) {
@@ -39,6 +39,8 @@ app.get('/suggest', function (req, res) {
   res.render('suggest');
 });
 
+app.use(express.static('public'));
+
 // custom 404 page
 app.use(function (req, res, next) {
   res.status(404);
@@ -51,8 +53,6 @@ app.use(function (err, req, res, next) {
   res.status(500);
   res.render('500', {layout: 'plain_views'});
 });
-
-app.use(express.static('public'));
 
 // start server
 app.listen(portNum, function () {
