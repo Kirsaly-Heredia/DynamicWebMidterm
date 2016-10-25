@@ -11,11 +11,11 @@ var upload = multer({ dest: uploadPath});
 
 var Place = require('../models/place');
 
-router.get('/add', function(req, res) {
+router.get('/add', function (req, res) {
   res.render('suggest');
 });
 
-router.post('/add', upload.single('image'), function(req, res) {
+router.post('/add', upload.single('image'), function (req, res) {
   var place = new Place({
     placeName: req.body.placeName,
     category: req.body.category,
@@ -27,22 +27,22 @@ router.post('/add', upload.single('image'), function(req, res) {
     imageFilename: req.file.filename
   });
 
-  place.save(function(err, data){
-    if (err){
+  place.save(function (err, data) {
+    if (err) {
       console.log(err);
-      return res.redirect (303, '/home'); 
+      return res.redirect(303, '/');
     }
 
     return res.redirect(303, '/explore');
   });
 });
 
-router.get('/explore', function(req, res) {
+router.get('/explore', function (req, res) {
   var query = {};
   if (req.query.country) {
     query = {country: req.query.country};
   }
-  Place.find(query, function(err, data) {
+  Place.find(query, function (err, data) {
     var pageData = {
       places: data
     };

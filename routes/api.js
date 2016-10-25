@@ -3,11 +3,11 @@ var router = express.Router();
 
 var Place = require('../models/place');
 
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
   res.render('home', {layouts: 'plain_views'});
 });
 
-router.post('/place', function(req, res, next) {
+router.post('/place', function (req, res, next) {
   
   var place = new Place({
     placeName: req.body.placeName,
@@ -20,7 +20,7 @@ router.post('/place', function(req, res, next) {
     imageFilename: req.file.imageFilename
   });
 
-  place.save(function(err, data) {
+  place.save(function (err, data) {
     if (err) {
       console.log(err);
       res.status(500);
@@ -30,18 +30,18 @@ router.post('/place', function(req, res, next) {
     return res.json({
       status: 'ok',
       message: 'created new place',
-      pet: data
+      place: data
     });
       
   });
 
 });
 
-router.get('/place', function(req, res, next) {
-  Place.find({}, function(err, data) {
+router.get('/place', function (req, res, next) {
+  Place.find({}, function (err, data) {
     if (err) {
       res.status(500);
-      return res.render('500',{layout: 'plain_views'});
+      return res.render('500', {layout: 'plain_views'});
     }
     
     return res.json(data);
