@@ -22,17 +22,18 @@ div.button {
 }
 
 a img{
-	width: 200px; height:200px;
+  width: 200px; height:200px;
 }
 
 a p{
   font-family: 'Droid Sans', Verdana, sans-serif;
-  font-style: bold;
+  font-weight: '700';
   color: #e5eaef;
   width: 200px;
   font-size: 25px;
   position: relative;
   left: 28%;
+  text-decoration: none
 }
 
 /*------------errorPageStyles------------*/
@@ -62,3 +63,27 @@ div.error p a{
   text-decoration: underline;
 }
 
+/*------------submittedStyles------------*/
+div.submitted h1{
+  font-family: 'Lobster', cursive;
+  color: #e5eaef;
+  font-size: 70px;
+  position: absolute;
+  top: 35%; left: 25%;
+}
+
+div.submitted p a{
+  position: absolute;
+  top: 60%;
+  color: #e5eaef;
+  font-family: 'Droid Sans', Verdana, sans-serif;
+  text-decoration: underline;
+}
+
+a.explore{
+  left: 40%;
+}
+
+a.suggest{
+  left: 50%;
+}

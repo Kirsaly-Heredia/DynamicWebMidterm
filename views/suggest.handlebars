@@ -1,17 +1,17 @@
 <h1 class="suggest">Where Should We Go?</h1>
 
-<form action ="/places/add" method="post" enctype="multipart/form-data">
+<form action ="/suggest" method="post" enctype="multipart/form-data">
 
   <!--place name-->
   <div class="place">
     <label for="place">Place: </label>
-    <input type="text" name="placeName" id="place">
+    <input type="text" name="placeName" id="place" required="required">
   </div>
 
   <!--category-->
   <div class="country">
     <label for="category">Category: </label>
-    <select name="category" id="category">
+    <select name="category" id="category" required="required">
       <option value="parks">Parks</option>
       <option value="sights&landmarks">Sights &amp; Landmarks</option>
       <option value="museums">Museums</option>
@@ -23,41 +23,41 @@
   <!--continent-->
   <div class="continent">
     <label for="continent">Continent: </label>
-    <select name="continent" id="continent">
-      <option value="north america">North America</option>
-      <option value="south america">South America</option>
-      <option value="europe">Europe</option>
-      <option value="asia">Asia</option>
-      <option value="africa">Africa</option>
-      <option value="australia">Australia</option>
+    <select name="continent" id="continent" required="required">
+      <option value="North America">North America</option>
+      <option value="South America">South America</option>
+      <option value="Europe">Europe</option>
+      <option value="Asia">Asia</option>
+      <option value="Africa">Africa</option>
+      <option value="Australia">Australia</option>
     </select>
   </div>
 
   <!--country-->
   <div class="country">
     <label for="country">Country: </label>
-    <input type="text" name="country" id="country">
+    <input type="text" name="country" id="country" required="required">
   </div>
 
   <!--city-->
   <div class="city">
     <label for="city">City: </label>
-    <input type="text" name="city" id="city">
+    <input type="text" name="city" id="city" required="required">
   </div>
 
   <!--address-->
   <div class="address">
     <label for="address">Address: </label>
-    <textarea name="address"></textarea>
+    <input type="text" name="address" id="address" required="required">
   </div>
   
   <!--img-->
   <label for="image">Image: </label>
-  <input id="image" type="file" name="image" accepts="image/*" >
-
+  <input id="image" type="file" name="image" accepts="image/*" required="required" class="image"> 
+  
   <!--description-->
-  <textarea name="description" class="desciption">Enter a description...</textarea>
-
+  <textarea name="description" class="description" required="required">Enter a description...</textarea>
+    
   <!--submit button-->
   <input class="submit" type="submit">
 

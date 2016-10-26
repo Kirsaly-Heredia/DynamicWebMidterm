@@ -1,12 +1,19 @@
-div.place{
+div.place_result{
+  background-color: #e5eaef;
   display: inline-block;
   width:45%;
-  margin-right: 50px;
+  height: 250px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 img.result{
   width:215px; height: 215px;
   float: left;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 
 img.cat{
@@ -14,6 +21,15 @@ img.cat{
   float: right;
 }
 
-div.place h3, div.place h4, div.place p, ul.sort li{
+div.place_result h3, div.place_result h5, div.place_result p, ul.sort li{
   font-family: 'Droid Sans', Verdana, sans-serif;
+}
+
+div.place_result h3{
+  margin-top: 16px;
+  margin-bottom: 5px;
+}
+
+div.place_result h5{
+  margin: 5px 0px;
 }
